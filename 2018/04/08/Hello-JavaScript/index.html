@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="赵兴盛的博客">
 <meta property="og:description" content="JavaScript JavaScript三大组成部分 JavaScript三大部分：ECMAScript、DOM、BOM   ECMAScript：是符合ECMA标准的基本javascript。简单来说ECMAScript不是一门语言，而是一个标准。符合这个标准的比较常见的有：JavaScript、Action Script（Flash中用的语言）。  DOM：Document Object M">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-08T10:50:13.583Z">
+<meta property="og:updated_time" content="2018-04-08T11:15:15.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello JavaScript">
 <meta name="twitter:description" content="JavaScript JavaScript三大组成部分 JavaScript三大部分：ECMAScript、DOM、BOM   ECMAScript：是符合ECMA标准的基本javascript。简单来说ECMAScript不是一门语言，而是一个标准。符合这个标准的比较常见的有：JavaScript、Action Script（Flash中用的语言）。  DOM：Document Object M">
@@ -363,7 +363,7 @@
 
       
         <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><hr>
-<h3 id="JavaScript三大组成部分"><a href="#JavaScript三大组成部分" class="headerlink" title="JavaScript三大组成部分"></a>JavaScript三大组成部分</h3><ul>
+<h2 id="JavaScript三大组成部分"><a href="#JavaScript三大组成部分" class="headerlink" title="JavaScript三大组成部分"></a>JavaScript三大组成部分</h2><ul>
 <li>JavaScript三大部分：ECMAScript、DOM、BOM</li>
 </ul>
 <ul>
@@ -372,12 +372,14 @@
 <li><p>DOM：Document Object Model文档对象模型，可以操作页面的代码，可以操作html和css部分。DOM是非常非常重要的部分。</p>
 </li>
 <li><p>BOM：Browser Object Model浏览器对象模型，操作浏览器shell的。因为每一个浏览器厂家的不同，导致我们在每一个浏览器操作BOM都不一样。</p>
-<h3 id="JavaScript的引入"><a href="#JavaScript的引入" class="headerlink" title="JavaScript的引入"></a>JavaScript的引入</h3></li>
+</li>
+</ul>
+<h2 id="JavaScript的引入"><a href="#JavaScript的引入" class="headerlink" title="JavaScript的引入"></a>JavaScript的引入</h2><ul>
 <li>在html的文件中,script的标签中写js代码</li>
 <li>在html的标签中写</li>
-<li>在js文件中可以写js代码,但是需要在html的页面中引入 script的标签中的src=”js的路径”<h6 id="为什么把script标签写在body标签里面的最后一行"><a href="#为什么把script标签写在body标签里面的最后一行" class="headerlink" title="为什么把script标签写在body标签里面的最后一行"></a>为什么把script标签写在body标签里面的最后一行</h6>浏览器在加载我们的html文件的时候，当遇到link标签的时候会异步加载，但是到script标签的时候并不会异步加载，而是会完全不加载后面的内容，而是去下载这个js文件，并且执行js文件里面的内容，之后下载并且执行完全部的js内容之后，浏览器才会继续执行html后面的代码。<br>这样就导致了一个问题，如果js是操作DOM的话，我们页面的DOM还没有出来，js就操作，就会出现错误，而且写在前面如果js文件比较大的话，就会导致页面一直没有内容。</li>
+<li>在js文件中可以写js代码,但是需要在html的页面中引入 script的标签中的src=”js的路径”<h5 id="为什么把script标签写在body标签里面的最后一行"><a href="#为什么把script标签写在body标签里面的最后一行" class="headerlink" title="为什么把script标签写在body标签里面的最后一行"></a>为什么把script标签写在body标签里面的最后一行</h5>浏览器在加载我们的html文件的时候，当遇到link标签的时候会异步加载，但是到script标签的时候并不会异步加载，而是会完全不加载后面的内容，而是去下载这个js文件，并且执行js文件里面的内容，之后下载并且执行完全部的js内容之后，浏览器才会继续执行html后面的代码。<br>这样就导致了一个问题，如果js是操作DOM的话，我们页面的DOM还没有出来，js就操作，就会出现错误，而且写在前面如果js文件比较大的话，就会导致页面一直没有内容。</li>
 </ul>
-<h3 id="JavaScript特点"><a href="#JavaScript特点" class="headerlink" title="JavaScript特点"></a>JavaScript特点</h3><ul>
+<h2 id="JavaScript特点"><a href="#JavaScript特点" class="headerlink" title="JavaScript特点"></a>JavaScript特点</h2><ul>
 <li>解析执行：轻量级解释型的，或是 JIT 编译型的程序设计语言。不需要编译代码，可以跨平台</li>
 <li>单线程：js是单线程的语言，同时只能执行一件事情。</li>
 <li>语言特点：动态，头等函数 (First-class Function)<ul>
@@ -388,23 +390,23 @@
 <li>但是在很多非浏览器环境中也使用 JavaScript ，例如 node.js</li>
 </ul>
 </li>
-<li>编程范式：基于原型、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如：函数式编程）编程风格<h3 id="JavaScript执行队列"><a href="#JavaScript执行队列" class="headerlink" title="JavaScript执行队列"></a>JavaScript执行队列</h3></li>
+<li>编程范式：基于原型、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如：函数式编程）编程风格</li>
 </ul>
-<p>js中有一个重要的概念就是执行队列。<br>js只有一个主线程，它是单线程的。<br>其他模块把任务分解成好多的小模块，这些小模块排成一个队列，队列最前面的进入主线程执行，执行完之后第二个进入主线程执行，这个队列就是js的执行队列。有点像操作系统里面的轮转时间片。</p>
-<h3 id="JavaScript中的变量"><a href="#JavaScript中的变量" class="headerlink" title="JavaScript中的变量"></a>JavaScript中的变量</h3><p>变量是计算机内存中存储数据的标识符，根据变量名称可以获取到内存中存储的数据。使用变量可以方便的获取或者修改内存中的数据</p>
-<h3 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h3><p>JavaScript 有 5 种简单数据类型：<code>Undefined、Null、Boolean、Number、String</code> 和 1 种复杂数据类型 <code>Object</code> </p>
-<h5 id="基本类型（值类型-栈数据）"><a href="#基本类型（值类型-栈数据）" class="headerlink" title="基本类型（值类型 栈数据）"></a>基本类型（值类型 栈数据）</h5><ul>
+<h2 id="JavaScript执行队列"><a href="#JavaScript执行队列" class="headerlink" title="JavaScript执行队列"></a>JavaScript执行队列</h2><p>js中有一个重要的概念就是执行队列。<br>js只有一个主线程，它是单线程的。<br>其他模块把任务分解成好多的小模块，这些小模块排成一个队列，队列最前面的进入主线程执行，执行完之后第二个进入主线程执行，这个队列就是js的执行队列。有点像操作系统里面的轮转时间片。</p>
+<h2 id="JavaScript中的变量"><a href="#JavaScript中的变量" class="headerlink" title="JavaScript中的变量"></a>JavaScript中的变量</h2><p>变量是计算机内存中存储数据的标识符，根据变量名称可以获取到内存中存储的数据。使用变量可以方便的获取或者修改内存中的数据</p>
+<h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型"></a>JavaScript数据类型</h2><p>JavaScript 有 5 种简单数据类型：<code>Undefined、Null、Boolean、Number、String</code> 和 1 种复杂数据类型 <code>Object</code> </p>
+<h3 id="基本类型（值类型-栈数据）"><a href="#基本类型（值类型-栈数据）" class="headerlink" title="基本类型（值类型 栈数据）"></a>基本类型（值类型 栈数据）</h3><ul>
 <li>Undefined</li>
 <li>Null</li>
 <li>Boolean</li>
 <li>Number</li>
-<li>String<h6 id="undefined和null的区别"><a href="#undefined和null的区别" class="headerlink" title="undefined和null的区别"></a>undefined和null的区别</h6></li>
+<li>String<h5 id="undefined和null的区别"><a href="#undefined和null的区别" class="headerlink" title="undefined和null的区别"></a>undefined和null的区别</h5></li>
 <li><p>undefind 变量未初始化 定义了变量没有给变量复制</p>
 </li>
 <li><p>null 变量未引用 值为空 object 一般用作占位</p>
 </li>
 </ul>
-<h5 id="复杂类型（引用类型-堆数据）"><a href="#复杂类型（引用类型-堆数据）" class="headerlink" title="复杂类型（引用类型 堆数据）"></a>复杂类型（引用类型 堆数据）</h5><ul>
+<h3 id="复杂类型（引用类型-堆数据）"><a href="#复杂类型（引用类型-堆数据）" class="headerlink" title="复杂类型（引用类型 堆数据）"></a>复杂类型（引用类型 堆数据）</h3><ul>
 <li>Object</li>
 <li>Array</li>
 <li>Date</li>
@@ -416,18 +418,18 @@
 <li>String</li>
 </ul>
 </li>
-<li><p>单体内置对象</p>
-<ul>
+<li>单体内置对象<ul>
 <li>Global</li>
-<li>Math<h4 id="类型检测"><a href="#类型检测" class="headerlink" title="类型检测"></a>类型检测</h4></li>
+<li>Math</li>
 </ul>
 </li>
-<li><p><code>typeof</code></p>
-</li>
+</ul>
+<h2 id="类型检测"><a href="#类型检测" class="headerlink" title="类型检测"></a>类型检测</h2><ul>
+<li><code>typeof</code></li>
 <li><code>instanceof</code></li>
 <li><code>Object.prototype.toString.call()</code></li>
 </ul>
-<h4 id="值类型与复杂类型的差别"><a href="#值类型与复杂类型的差别" class="headerlink" title="值类型与复杂类型的差别"></a>值类型与复杂类型的差别</h4><ul>
+<h2 id="值类型与复杂类型的差别"><a href="#值类型与复杂类型的差别" class="headerlink" title="值类型与复杂类型的差别"></a>值类型与复杂类型的差别</h2><ul>
 <li>基本类型在内存中占据固定大小的空间，因此被保存在栈内存中。引用类型的值是对象，保存在堆内存。</li>
 <li>从一个变量向另一个变量复制基本类型的值，复制的是值的副本。从一个变量向另一个变量复制引用类型的值的时候，复制是引用指针，因此两个变量最终都指向同一个对象。包含引用类型值的变量实际上包含的并不是对象本身，而是一个指向该对象的指针。</li>
 <li>基本类型值不可以被改变，复杂类型值可以被改变。</li>
@@ -586,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript三大组成部分"><span class="nav-number">1.0.1.</span> <span class="nav-text">JavaScript三大组成部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript的引入"><span class="nav-number">1.0.2.</span> <span class="nav-text">JavaScript的引入</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#为什么把script标签写在body标签里面的最后一行"><span class="nav-number">1.0.2.0.0.1.</span> <span class="nav-text">为什么把script标签写在body标签里面的最后一行</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript特点"><span class="nav-number">1.0.3.</span> <span class="nav-text">JavaScript特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript执行队列"><span class="nav-number">1.0.4.</span> <span class="nav-text">JavaScript执行队列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript中的变量"><span class="nav-number">1.0.5.</span> <span class="nav-text">JavaScript中的变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript数据类型"><span class="nav-number">1.0.6.</span> <span class="nav-text">JavaScript数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本类型（值类型-栈数据）"><span class="nav-number">1.0.6.0.1.</span> <span class="nav-text">基本类型（值类型 栈数据）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#undefined和null的区别"><span class="nav-number">1.0.6.0.1.1.</span> <span class="nav-text">undefined和null的区别</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#复杂类型（引用类型-堆数据）"><span class="nav-number">1.0.6.0.2.</span> <span class="nav-text">复杂类型（引用类型 堆数据）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型检测"><span class="nav-number">1.0.6.1.</span> <span class="nav-text">类型检测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#值类型与复杂类型的差别"><span class="nav-number">1.0.6.2.</span> <span class="nav-text">值类型与复杂类型的差别</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript三大组成部分"><span class="nav-number">1.1.</span> <span class="nav-text">JavaScript三大组成部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript的引入"><span class="nav-number">1.2.</span> <span class="nav-text">JavaScript的引入</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#为什么把script标签写在body标签里面的最后一行"><span class="nav-number">1.2.0.0.1.</span> <span class="nav-text">为什么把script标签写在body标签里面的最后一行</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript特点"><span class="nav-number">1.3.</span> <span class="nav-text">JavaScript特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript执行队列"><span class="nav-number">1.4.</span> <span class="nav-text">JavaScript执行队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript中的变量"><span class="nav-number">1.5.</span> <span class="nav-text">JavaScript中的变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript数据类型"><span class="nav-number">1.6.</span> <span class="nav-text">JavaScript数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型（值类型-栈数据）"><span class="nav-number">1.6.1.</span> <span class="nav-text">基本类型（值类型 栈数据）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined和null的区别"><span class="nav-number">1.6.1.0.1.</span> <span class="nav-text">undefined和null的区别</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂类型（引用类型-堆数据）"><span class="nav-number">1.6.2.</span> <span class="nav-text">复杂类型（引用类型 堆数据）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型检测"><span class="nav-number">1.7.</span> <span class="nav-text">类型检测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#值类型与复杂类型的差别"><span class="nav-number">1.8.</span> <span class="nav-text">值类型与复杂类型的差别</span></a></li></ol></li></ol></div>
             
 
           </div>
