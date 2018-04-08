@@ -365,80 +365,20 @@
       
         
           
-            <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="#JavaScript"></a>#JavaScript</h2><p>###JavaScript三大组成部分</p>
-<ul>
-<li>JavaScript三大部分：ECMAScript、DOM、BOM</li>
-</ul>
-<ul>
-<li><p>ECMAScript：是符合ECMA标准的基本javascript。<br>简单来说ECMAScript不是一门语言，而是一个标准。符合这个标准的比较常见的有：JavaScript、Action Script（Flash中用的语言）。</p>
-</li>
-<li><p>DOM：Document Object Model文档对象模型，可以操作页面的代码，可以操作html和css部分。DOM是非常非常重要的部分。</p>
-</li>
-<li><p>BOM：Browser Object Model浏览器对象模型，操作浏览器shell的。因为每一个浏览器厂家的不同，导致我们在每一个浏览器操作BOM都不一样。<br>###JavaScript的引入</p>
-</li>
-<li>在html的文件中,script的标签中写js代码</li>
-<li>在html的标签中写</li>
-<li>在js文件中可以写js代码,但是需要在html的页面中引入 script的标签中的src=”js的路径”<br>######为什么把script标签写在body标签里面的最后一行<br>浏览器在加载我们的html文件的时候，当遇到link标签的时候会异步加载，但是到script标签的时候并不会异步加载，而是会完全不加载后面的内容，而是去下载这个js文件，并且执行js文件里面的内容，之后下载并且执行完全部的js内容之后，浏览器才会继续执行html后面的代码。<br>这样就导致了一个问题，如果js是操作DOM的话，我们页面的DOM还没有出来，js就操作，就会出现错误，而且写在前面如果js文件比较大的话，就会导致页面一直没有内容。</li>
-</ul>
-<p>###JavaScript特点</p>
-<ul>
-<li>解析执行：轻量级解释型的，或是 JIT 编译型的程序设计语言。不需要编译代码，可以跨平台</li>
-<li>单线程：js是单线程的语言，同时只能执行一件事情。</li>
-<li>语言特点：动态，头等函数 (First-class Function)<ul>
-<li>又称函数是 JavaScript 中的一等公民</li>
-</ul>
-</li>
-<li>执行环境：在宿主环境（host environment）下运行，浏览器是最常见的 JavaScript 宿主环境<ul>
-<li>但是在很多非浏览器环境中也使用 JavaScript ，例如 node.js</li>
-</ul>
-</li>
-<li>编程范式：基于原型、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如：函数式编程）编程风格<br>###JavaScript执行队列</li>
-</ul>
-<p>js中有一个重要的概念就是执行队列。<br>js只有一个主线程，它是单线程的。<br>其他模块把任务分解成好多的小模块，这些小模块排成一个队列，队列最前面的进入主线程执行，执行完之后第二个进入主线程执行，这个队列就是js的执行队列。有点像操作系统里面的轮转时间片。</p>
-<p>###JavaScript中的变量<br>变量是计算机内存中存储数据的标识符，根据变量名称可以获取到内存中存储的数据。使用变量可以方便的获取或者修改内存中的数据</p>
-<p>###JavaScript数据类型</p>
-<p>JavaScript 有 5 种简单数据类型：<code>Undefined、Null、Boolean、Number、String</code> 和 1 种复杂数据类型 <code>Object</code> </p>
-<h5 id="基本类型（值类型-栈数据）"><a href="#基本类型（值类型-栈数据）" class="headerlink" title="基本类型（值类型 栈数据）"></a>基本类型（值类型 栈数据）</h5><ul>
-<li>Undefined</li>
-<li>Null</li>
-<li>Boolean</li>
-<li>Number</li>
-<li>String<br>######undefined和null的区别</li>
-<li><p>undefind 变量未初始化 定义了变量没有给变量复制</p>
-</li>
-<li><p>null 变量未引用 值为空 object 一般用作占位</p>
-</li>
-</ul>
-<h5 id="复杂类型（引用类型-堆数据）"><a href="#复杂类型（引用类型-堆数据）" class="headerlink" title="复杂类型（引用类型 堆数据）"></a>复杂类型（引用类型 堆数据）</h5><ul>
-<li>Object</li>
-<li>Array</li>
-<li>Date</li>
-<li>RegExp</li>
-<li>Function</li>
-<li>基本包装类型<ul>
-<li>Boolean</li>
-<li>Number</li>
-<li>String</li>
-</ul>
-</li>
-<li><p>单体内置对象</p>
-<ul>
-<li>Global</li>
-<li>Math<h4 id="类型检测"><a href="#类型检测" class="headerlink" title="类型检测"></a>类型检测</h4></li>
-</ul>
-</li>
-<li><p><code>typeof</code></p>
-</li>
-<li><code>instanceof</code></li>
-<li><code>Object.prototype.toString.call()</code></li>
-</ul>
-<h4 id="值类型与复杂类型的差别"><a href="#值类型与复杂类型的差别" class="headerlink" title="值类型与复杂类型的差别"></a>值类型与复杂类型的差别</h4><ul>
-<li>基本类型在内存中占据固定大小的空间，因此被保存在栈内存中。引用类型的值是对象，保存在堆内存。</li>
-<li>从一个变量向另一个变量复制基本类型的值，复制的是值的副本。从一个变量向另一个变量复制引用类型的值的时候，复制是引用指针，因此两个变量最终都指向同一个对象。包含引用类型值的变量实际上包含的并不是对象本身，而是一个指向该对象的指针。</li>
-<li>基本类型值不可以被改变，复杂类型值可以被改变。</li>
-</ul>
+          #JavaScript###JavaScript三大组成部分
 
-          
+JavaScript三大部分：ECMAScript、DOM、BOM
+
+
+ECMAScript：是符合ECMA标准的基本javascript。简单来说ECMAScript不是一门语言，而是一个标准。符合这个标准的比较常见的有：JavaSc
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/08/Hello-JavaScript/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
